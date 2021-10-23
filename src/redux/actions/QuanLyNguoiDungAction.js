@@ -6,18 +6,16 @@ import {history} from '../../App'
 
 export const dangNhapAction = (thongTinDangNhap) => {
 
-
-
     return async (dispatch) => {
 
         try {
             const result = await quanLyNguoiDungService.dangNhap(thongTinDangNhap);
 
 
-            if (result.data.statusCode === 200) {
+            if (result.status === 200) {
                 dispatch({
                     type: DANG_NHAP_ACTION,
-                    thongTinDangNhap: result.data.content
+                    thongTinDangNhap: result.data
                 });
                 //Chuyển hướng đăng nhập về trang trước đó
                 history.goBack();
@@ -44,13 +42,13 @@ export const layThongTinNguoiDungAction = (thongTinDangNhap) => {
     return async (dispatch) => {
 
         try {
-            const result = await quanLyNguoiDungService.layThongTinNguoiDung();
+            const result = await quanLyNguoiDungService.layThongTinNguoiDung(thongTinDangNhap);
 
 
-            if (result.data.statusCode === 200) {
+            if (result.data.status === 200) {
                 dispatch({
                     type: SET_THONG_TIN_NGUOI_DUNG,
-                    thongTinNguoiDung: result.data.content
+                    thongTinNguoiDung: result.data
                 });
 
             }

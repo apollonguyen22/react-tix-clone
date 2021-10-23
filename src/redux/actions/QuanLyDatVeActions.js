@@ -16,7 +16,7 @@ export const layChiTietPhongVeAction = (maLichChieu) => {
             if (result.status === 200) {
                 dispatch({
                     type: SET_CHI_TIET_PHONG_VE,
-                    chiTietPhongVe: result.data.content
+                    chiTietPhongVe: result.data
                 })
             }
 

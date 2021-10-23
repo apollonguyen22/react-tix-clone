@@ -10,8 +10,8 @@ export class QuanLyNguoiDungService  extends baseService{
         return this.post(`/api/QuanLyNguoiDung/DangNhap`,thongTinDangNhap);
     }
     
-    layThongTinNguoiDung = () => {
-        return this.post('/api/QuanLyNguoiDung/ThongTinTaiKhoan');
+    layThongTinNguoiDung = (data) => {
+        return this.post(`/api/QuanLyNguoiDung/ThongTinTaiKhoan?MaNhom=${GROUPID}`,data);
     }
   
 }

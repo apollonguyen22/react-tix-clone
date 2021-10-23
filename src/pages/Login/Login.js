@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from 'formik';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,23 +9,23 @@ export default function Login(props) {
 
     const dispatch = useDispatch();
 
-    const {userLogin} = useSelector(state=>state.QuanLyNguoiDungReducer);
+    const { userLogin } = useSelector(state => state.QuanLyNguoiDungReducer);
 
-    console.log('userLogin',userLogin)
+    console.log('userLogin', userLogin)
 
     const formik = useFormik({
         initialValues: {
-          taiKhoan: '',
-          matKhau: '',
+            taiKhoan: '',
+            matKhau: '',
         },
         onSubmit: values => {
 
             const action = dangNhapAction(values);
             dispatch(action);
 
-            console.log('values',values);
+            console.log('values', values);
         },
-      });
+    });
 
 
     return (
@@ -51,28 +52,28 @@ export default function Login(props) {
                     <div>
                         <div>
                             <div className="text-sm font-bold text-gray-700 tracking-wide">Tài khoản</div>
-                            <input name="taiKhoan" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"  placeholder="Nhập vào tài khoản" />
+                            <input name="taiKhoan" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Nhập vào tài khoản" />
                         </div>
                         <div className="mt-8">
                             <div className="flex justify-between items-center">
-                                <div  className="text-sm font-bold text-gray-700 tracking-wide">
+                                <div className="text-sm font-bold text-gray-700 tracking-wide">
                                     Mật khẩu
-      </div>
+                                </div>
                                 <div>
                                     <a className="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
                           cursor-pointer">
                                         Quên mật khẩu ?
-        </a>
+                                    </a>
                                 </div>
                             </div>
-                            <input type="password" name="matKhau" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"  placeholder="Nhập vào mật khẩu" />
+                            <input type="password" name="matKhau" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Nhập vào mật khẩu" />
                         </div>
                         <div className="mt-10">
-                            <button className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
+                            <button type="submit" className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
                   font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
                   shadow-lg">
                                 Đăng nhập
-    </button>
+                            </button>
                         </div>
                     </div>
                     <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">

@@ -46,7 +46,7 @@ export default function Detail(props) {
                             <img className="col-span-1" src={filmDetail.hinhAnh} style={{ width: '100%', height: 300 }} alt="123" />
                             <div className="col-span-2 ml-5" style={{ marginTop: '25%' }}>
                                 <p className="text-sm">Ngày chiếu: {moment(filmDetail.ngayKhoiChieu).format('DD.MM.YYYY')}</p>
-                                <p className="text-4xl leading-3">{filmDetail.tenPhim}</p>
+                                <p className="text-4xl leading-10">{filmDetail.tenPhim}</p>
                                 <p>{filmDetail.moTa}</p>
                             </div>
                         </div>

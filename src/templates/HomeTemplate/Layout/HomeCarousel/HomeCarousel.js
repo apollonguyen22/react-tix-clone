@@ -1,48 +1,39 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Carousel } from 'antd';
-import { useSelector,useDispatch } from 'react-redux'
-
-import axios from 'axios'
-import { getCarouselAction } from '../../../../redux/actions/CarouselActions';
+import { useSelector } from 'react-redux'
 import './HomeCarousel.css';
 
 const contentStyle = {
-    height: '600px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    backgroundPosition: 'center',
-    backgroundSize: '100%',
-    backgroundRepeat: 'no-repeat',
-    
+    paddingBottom: "43%",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+
 };
 
 export default function HomeCarousel(props) {
 
     const { arrImg } = useSelector(state => state.CarouselReducer)
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     //Sẽ tự kích hoạt khi component load ra 
-    useEffect( () => {
-    
-        //1 action = {type:'',data}
-        //2 (phải cài middleware): callBackFunction (dispatch)
+    // useEffect( () => {
 
-        // const action = getCarouselAction(1);
+    //     //1 action = {type:'',data}
+    //     //2 (phải cài middleware): callBackFunction (dispatch)
 
-        dispatch(getCarouselAction());
+    //     // const action = getCarouselAction(1);
 
-            
-
-    }, [])
+    //     dispatch(getCarouselAction());
+    // }, [])
 
 
     const renderImg = () => {
         return arrImg.map((item, index) => {
             return <div key={index}>
                 <div style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})` }}>
-                    <img src={item.hinhAnh} className="opacity-0"  alt={item.hinhAnh} />
+                    <img src={item.hinhAnh} className="w-full h-0 object-cover hidden opacity-0" alt={item.hinhAnh} />
                 </div>
             </div>
         })
@@ -50,10 +41,9 @@ export default function HomeCarousel(props) {
 
     return (
 
-        <Carousel effect="fade" style={{width:'100%',padding:0,margin:0}} >
+        <Carousel autoplay>
             {renderImg()}
-
         </Carousel>
-   
+
     )
 }

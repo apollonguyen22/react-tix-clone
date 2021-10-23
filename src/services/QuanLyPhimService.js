@@ -7,7 +7,7 @@ export class QuanLyPhimService  extends baseService{
     }
 
     layDanhSachBanner = () => {
-        return this.get(`/api/QuanLyPhim/LayDanhSachBanner`);
+        return this.banner(`/api/QuanLyPhim/LayDanhSachBanner`);
     }
     
     layDanhSachPhim = () => {
