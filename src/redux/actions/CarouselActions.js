@@ -1,5 +1,5 @@
-import { SET_CAROUSEL } from './types/CarouselType';
-import {quanLyPhimService} from '../../services/QuanLyPhimService';
+// import { SET_CAROUSEL } from './types/CarouselType';
+// import {quanLyPhimService} from '../../services/QuanLyPhimService';
 
 // export const getCarouselAction = () => {
 

@@ -12,7 +12,6 @@ export default function Film_Flip(props) {
         <div className="flip-card p-3 md:w-2/3">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
-
                     <img src={item.hinhAnh} alt="Avatar" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div className="flip-card-back" style={{ position: 'relative', backgroundColor: 'rgba(0,0,0,.9)' }}>

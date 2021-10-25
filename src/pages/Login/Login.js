@@ -52,7 +52,7 @@ export default function Login(props) {
                     <div>
                         <div>
                             <div className="text-sm font-bold text-gray-700 tracking-wide">Tài khoản</div>
-                            <input name="taiKhoan" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Nhập vào tài khoản" />
+                            <input name="taiKhoan" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Tài khoản" />
                         </div>
                         <div className="mt-8">
                             <div className="flex justify-between items-center">
@@ -66,7 +66,7 @@ export default function Login(props) {
                                     </a>
                                 </div>
                             </div>
-                            <input type="password" name="matKhau" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Nhập vào mật khẩu" />
+                            <input type="password" name="matKhau" onChange={formik.handleChange} className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Mật khẩu" />
                         </div>
                         <div className="mt-10">
                             <button type="submit" className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide

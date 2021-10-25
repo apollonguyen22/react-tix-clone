@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import HomeMenu from './HomeMenu/HomeMenu'
 //Kết nối redux
 import { useSelector, useDispatch } from 'react-redux'

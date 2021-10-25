@@ -50,7 +50,7 @@ function Checkout(props) {
             }
 
 
-            if (indexGheDD != -1) {
+            if (indexGheDD !== -1) {
                 classGheDaDat = 'gheDangDat';
             }
 
@@ -63,7 +63,7 @@ function Checkout(props) {
                     })
                 }} disabled={ghe.daDat} className={`ghe ${classGheVip} ${classGheDaDat} ${classGheDangDat} ${classGheDaDuocDat} text-center`} key={index}>
 
-                    {ghe.daDat ? classGheDaDuocDat != '' ? <UserOutlined style={{ marginBottom: 7.5, fontWeight: 'bold' }} /> : <CloseOutlined style={{ marginBottom: 7.5, fontWeight: 'bold' }} /> : ghe.stt}
+                    {ghe.daDat ? classGheDaDuocDat !== '' ? <UserOutlined style={{ marginBottom: 7.5, fontWeight: 'bold' }} /> : <CloseOutlined style={{ marginBottom: 7.5, fontWeight: 'bold' }} /> : ghe.stt}
 
                 </button>
 

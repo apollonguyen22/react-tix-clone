@@ -29,7 +29,7 @@ export default function Footer(props) {
                         <div className="grid grid-cols-3" style={{ color: '#fff' }}>
                             {arrHeThongRap.map((htr, index) => {
                                 return <div key={index}>
-                                    <img src={htr.logo} style={{ width: 50 }} />
+                                    <img src={htr.logo} style={{ width: 50 }} alt=""/>
                                 </div>
                             })}
                         </div>
