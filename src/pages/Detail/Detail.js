@@ -88,7 +88,7 @@ export default function Detail(props) {
                                                 {htr.cumRapChieu?.map((cumRap,index)=>{ 
                                                     return <div className="mt-5" key={index}>
                                                         <div className="flex flex-row">
-                                                            <img style={{width:60,height:60}} src={cumRap.hinhAnh} alt=""/>
+                                                            <img style={{width:60,height:60}} src="https://s3img.vcdn.vn/123phim/2018/09/ddc-dong-da-15379624326697.jpg" alt=""/>
                                                             <div className="ml-2">
                                                                 <p style={{fontSize:20,fontWeight:'bold',lineHeight:1}} >{cumRap.tenCumRap}</p>
                                                                 <p className="text-gray-400" style={{marginTop:0}}>{cumRap.diaChi}</p>
